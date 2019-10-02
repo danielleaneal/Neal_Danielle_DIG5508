@@ -1,5 +1,5 @@
 #%% [markdown]
-
+HELLO
 # # Lab 1: Programming Concept Review
 # In this lab, you will practice using Python by first modifying code to achieve
 # certain results. At the end of this lab, you will have written a new function

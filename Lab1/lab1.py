@@ -51,8 +51,10 @@ HELLO
 ("Hello it's Danielle")
 
 # int
+(4)
 
 # float
+(1.3248934)
 
 # bool
 

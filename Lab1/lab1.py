@@ -48,6 +48,7 @@
 
 # ON YOUR OWN: Type an example value for each of the four types of values in this cell below each comment: 
 # string
+("Hello it's Danielle")
 
 # int
 

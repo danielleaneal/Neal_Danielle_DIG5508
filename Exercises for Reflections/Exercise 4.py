@@ -1,6 +1,7 @@
 #Sharing a hello world python file between three people and making changes
 
 #%%
-Print("Hello World. It's Danielle Ashton Neal. Nice to meet you.")
+print("Hello World. It's Danielle Ashton Neal. Nice to meet you.")
+
 
 #%%

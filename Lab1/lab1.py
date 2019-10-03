@@ -57,6 +57,9 @@ HELLO
 (1.3248934)
 
 # bool
+True
+
+
 
 #%% [markdown]
 
@@ -76,7 +79,7 @@ type(5) # Will print the "int" to the console.
 a = 5
 #%% 
 # If you enter a variable without first defining it, you will receive a NameError:
-b
+b=0
 
 #%%
 
@@ -89,6 +92,8 @@ try:
         print("b is not assigned a value of an integer type")
 except:
     print("Make sure to initialize b to a value in the session")
+ 
+
 
 #%% [markdown] 
 #
@@ -103,6 +108,9 @@ print(a)
 # - "Hello World"
 # - 42.0 
 # - True
+a="Hello World"
+a=(42.0)
+a=(True)
 
 #%% [markdown]
 
@@ -168,6 +176,9 @@ print(3+return_four())
 # *ON YOUR OWN:* Write a function that returns the string "!" (exclamation),
 # called "exclaim", and use it to concatenate the returned value to the string
 # "Hello World" in a print statement.
+def exclaim(x,y):
+    return x+y
+exclaim("hello world","!")
 
 #%% [markdown]
 # ## Parameters and Arguments
@@ -184,8 +195,11 @@ f1(1) # 1 is passed in as an argument to the function, and is bound to the local
 # *ON YOUR OWN:* In this cell, Modify the function `multiply_2` to accept two
 # arguments and returns the result of multiplying them together. You may name
 # the arguments anything you want
-def multiply_2():
-    return
+#%%
+def multiply_2(x,y):
+    return x*y
+multiply_2(2,2)
+
 
 #%% [markdown]
 # # Conditionals and Tests
@@ -234,6 +248,18 @@ compare_with_3(4)
 # compare(10,3) 
 # 10 is greater than 3
 
+#%%
+def compare(num1, num2):
+    if num1==num2:
+        print(str(num1)+ " is equal to "+(str(num2)))
+    elif num1 > num2:
+        print(str(num1)+ " is greater than "+(str(num2)))
+compare(3,3)
+compare(10,3)
+
+
+
+
 #%% [markdown]
 # # Scope
 # The last topic covered in this part of the lab is the concept of scope. Scope
@@ -268,7 +294,7 @@ print(x)
 
 # If the function changes the value passed in, the new value can be assigned to the previosu variable:
 
-
+#%%
 def add_one(x):
     return x + 1
 x = 10
@@ -296,7 +322,7 @@ for value in [1,2]:
 # 
 # You can generate a sequence to iterate a specified number of
 # times using the `range` method:
-
+#%%
 for value in range(1,10):
     print(value)  
 
@@ -305,6 +331,7 @@ for value in range(1,10):
 # The while loop will continue executing until the expression after it is true.
 # This is useful if you don't know when the loop will end, whereas the `for`
 # loop is often called "definite iteration" for this reason. 
+#%%
 x = 10
 while x > 1:
     print(x)
@@ -316,6 +343,7 @@ while x > 1:
 # the 'import' keyword, and call methods using the '.' operator. One useful
 # method in the random function is the randint, which returns a random integere
 # between the two arguments. 
+#%%
 import random
 print(random.randint(2,100))
 print(random.randint(2,100))
@@ -327,3 +355,13 @@ print(random.randint(2,100))
 #
 # The function should accept a single argument. For instance, sum_random(2)
 # would sum two numbers between 1 and 100: 34 and 16 and return the value 50.
+
+#%%
+import random
+def sum_random(x):
+    sum=0
+    for n in range(1,x+1):
+        sum=sum+random.randint(1,100)
+    return sum
+
+    

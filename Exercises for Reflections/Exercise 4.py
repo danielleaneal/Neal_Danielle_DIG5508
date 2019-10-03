@@ -9,3 +9,6 @@ print("Hello Danielle, I am collaborating for this excersice.")
 
 #%%
 print("Hello again, It is Sthephany Maldonado!")
+
+#%% 
+print ("Hello this is Hanae, and these are my changes i really hope it works this time!")

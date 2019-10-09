@@ -108,6 +108,8 @@ print(a)
 # - "Hello World"
 # - 42.0 
 # - True
+
+#%%
 a="Hello World"
 a=(42.0)
 a=(True)

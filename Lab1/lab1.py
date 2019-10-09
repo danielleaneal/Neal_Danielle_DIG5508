@@ -176,6 +176,8 @@ print(3+return_four())
 # *ON YOUR OWN:* Write a function that returns the string "!" (exclamation),
 # called "exclaim", and use it to concatenate the returned value to the string
 # "Hello World" in a print statement.
+
+#%%
 def exclaim(x,y):
     return x+y
 exclaim("hello world","!")
@@ -195,6 +197,7 @@ f1(1) # 1 is passed in as an argument to the function, and is bound to the local
 # *ON YOUR OWN:* In this cell, Modify the function `multiply_2` to accept two
 # arguments and returns the result of multiplying them together. You may name
 # the arguments anything you want
+
 #%%
 def multiply_2(x,y):
     return x*y

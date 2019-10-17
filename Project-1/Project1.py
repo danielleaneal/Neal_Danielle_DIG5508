@@ -36,7 +36,13 @@ def phrase():
     text = choice(operators) + ' ' + choice(subjects)
     if text == 'A APPLE':
         text = 'AN APPLE'
+    if text == 'A ARM':
+        text == 'AN ARM'
+    if text == 'A US':
+        text == 'AN US'
     return text + ' IS '
+
+
 
 print('')
 print(phrase() + choice(predicates) + choice(conjunctions) +

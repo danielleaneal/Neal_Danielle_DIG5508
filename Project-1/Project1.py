@@ -20,21 +20,22 @@
 #
 # Updated 31 May 2018 to add compatibility with Python 3 (Python 2 still works)
 
+#%%
 from random import choice
 
-subjects = ['COUNT', 'STRANGER', 'LOOK', 'CHURCH', 'CASTLE', 'PICTURE',
-            'EYE', 'VILLAGE', 'TOWER', 'FARMER', 'WAY', 'GUEST', 'DAY',
-            'HOUSE', 'TABLE', 'LABOURER']
-predicates = ['OPEN', 'SILENT', 'STRONG', 'GOOD', 'NARROW', 'NEAR',
-              'NEW', 'QUIET', 'FAR', 'DEEP', 'LATE', 'DARK', 'FREE',
-              'LARGE', 'OLD', 'ANGRY']
-conjunctions = [' AND ', ' OR ', ' THEREFORE ', '. ', '. ', '. ', '. ', '. ']
+subjects = ['DOG', 'CAT', 'ME', 'YOU', 'US', 'PEAR',
+            'ARM', 'LEG', 'SCHOOL', 'HOUSE', 'BROTHER', 'APPLE', 'WEEK',
+            'STORE', 'TOWN', 'COWORKER']
+predicates = ['BEST', 'QUIET', 'TALL', 'SHORT', 'HIGH', 'LOW',
+              'LOUD', 'YOUNG', 'MAD', 'JOYOUS', 'MOURNFUL', 'HEAVY', 'EXPENSIVE',
+              'BIG', 'GOOGLE', 'ANTIQUE']
+conjunctions = [' AND ', ' OR ', ' THEREFORE ', ' MEANWHILE ', ' SINCE ', '. ', '. ', '. ']
 operators = ['A', 'EVERY', 'NO', 'NOT EVERY']
 
 def phrase():
     text = choice(operators) + ' ' + choice(subjects)
-    if text == 'A EYE':
-        text = 'AN EYE'
+    if text == 'A APPLE':
+        text = 'AN APPLE'
     return text + ' IS '
 
 print('')

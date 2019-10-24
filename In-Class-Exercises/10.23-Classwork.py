@@ -16,9 +16,10 @@ import re
 
 
 #%%
+import re
 # txt = "The rain in Spain"
-x = re.search("a*", txt)
-print(x)
+x = re.search("a*",)
+print(x) 
 
 
 #%%
@@ -34,12 +35,6 @@ import re
 x = re.search("\d{5}", 32124)
 print(x)
 #
-
-
-
-
-
-
 
 
 

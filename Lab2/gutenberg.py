@@ -160,12 +160,43 @@ source.close()
 
 #%%
 # 2. Write code that retrieves the text (if downloaded) and saves it to a variable. 
+from gutenberg.acquire import load_etext
+from gutenberg.cleanup import strip_headers
+from textblob import TextBlob
+
+text = strip_headers(
+    load_etext(1065)
+    ).strip()
+blob = TextBlob(text)
+# print(text)  # prints 'MOBY DICK; OR THE WHALE\n\nBy Herman Melville ...'
+# This will save the text to a local .txt file in this directory.
+source = open('Lab2/TheRaven.txt','w',encoding="utf-16",newline='\n')
+source.write(text)
+source.close()
+print(text)
 
 
 #%%
 # 3. Create a TextBlob from the variable above. This may involve locating the end of the header. 
 # Save the resulting TextBlob for use in the following cells. 
 
+from gutenberg.acquire import load_etext
+from gutenberg.cleanup import strip_headers
+from textblob import TextBlob
+
+text = strip_headers(
+    load_etext(1065)
+    ).strip()
+blob = TextBlob(text)
+source = open('Lab2/TheRaven.txt','w',encoding="utf-16",newline='\n')
+source.write(text)
+source.close()
+
+
+Dani = TextBlob(text)
+
+Dani.word_counts['the']
+#finds the frequency of the word "the"
 
 #%%
 # [2-2] ON YOUR OWN:

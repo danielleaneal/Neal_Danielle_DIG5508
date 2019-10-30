@@ -34,17 +34,27 @@ from gutenberg.acquire import load_etext
 from gutenberg.cleanup import strip_headers
 from textblob import TextBlob
 
-text = strip_headers(load_etext(2701)).strip()
+text = strip_headers(
+    load_etext(2701)
+    ).strip()
 blob = TextBlob(text)
 # print(text)  # prints 'MOBY DICK; OR THE WHALE\n\nBy Herman Melville ...'
 # This will save the text to a local .txt file in this directory.
-source = open('in-class/week-6/mobydick.txt','w',encoding="utf-16",newline='\n')
+source = open('Lab2/mobydick.txt','w',encoding="utf-16",newline='\n')
 source.write(text)
 source.close()
 
+#In this cell, I'm receiving a "No module named 'gutenberg.acquire'; 'gutenberg' 
+# is not a package" error message. According to a stack overflow article,
+#(https://stackoverflow.com/questions/48637347/importerror-cannot-import-name-gutenburg)
+#it could be due to a misspelling, but I don't see any misspellings. I have the file
+#path correctly, but I am unable to get the Moby Dick text to save in my repository.
+#UPDATE: refreshed the kernel and reran the cell, the text got saved in my Lab2 folder
 
 #%%
 type(text)
+
+#%% type(text)
 
 
 #%%
@@ -134,7 +144,19 @@ fig.show()
 
 # Choose a text that was not previously analyzed above from Project Gutenberg.
 # 1. Write code that retrieves and writes the text to a file in the current project. You may save it to any file, but I recommend to save it to the lab2 subdirectory.
+from gutenberg.acquire import load_etext
+from gutenberg.cleanup import strip_headers
+from textblob import TextBlob
 
+text = strip_headers(
+    load_etext(1065)
+    ).strip()
+blob = TextBlob(text)
+# print(text)  # prints 'MOBY DICK; OR THE WHALE\n\nBy Herman Melville ...'
+# This will save the text to a local .txt file in this directory.
+source = open('Lab2/TheRaven.txt','w',encoding="utf-16",newline='\n')
+source.write(text)
+source.close()
 
 #%%
 # 2. Write code that retrieves the text (if downloaded) and saves it to a variable. 

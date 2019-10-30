@@ -240,6 +240,23 @@ fig = go.Figure(data=[go.Table(header=dict(values=['A Scores', 'B Scores']),
                      ])
 fig.show()
 
+#%%
+from collections import Counter
+
+split_words = blob.split()
+
+Counter = Counter(split_words)
+
+most_occur = Counter.most_common(10)
+
+##print(most_occur)
+
+#split into two variables
+mostusedword,countofuse = zip(*most_occur)
+
+print(mostusedword)
+print(countofuse)
+
 #I tried to install "Plotly" to do this question, but I do not have the administrative
 #priviliges to download plotly. Thus, I can't make a table for this question.
 

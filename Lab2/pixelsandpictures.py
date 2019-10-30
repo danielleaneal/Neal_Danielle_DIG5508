@@ -5,6 +5,10 @@ try:
 	print(os.getcwd())
 except:
 	pass
+
+#I'm working on a school computer, and I don't have the privileges to download plotly.
+#In the lab we have class in, I'm on device #DTCBC9W3Y2
+
 #%% [markdown]
 # # Pixels and Pictures
 # Lab 2: Part 2

@@ -196,7 +196,7 @@ source.close()
 Dani = TextBlob(text)
 
 Dani.word_counts['the']
-#finds the frequency of the word "the"
+#^finds the frequency of the word "the"
 
 #%%
 # [2-2] ON YOUR OWN:

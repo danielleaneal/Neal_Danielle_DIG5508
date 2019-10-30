@@ -203,10 +203,43 @@ Dani.word_counts['the']
 
 # Write code that finds the top 5 longest sentences in the work. You may store or display them however you choose, and you may build off of the code above that finds the longest sentence.
 
+from gutenberg.acquire import load_etext
+from gutenberg.cleanup import strip_headers
+from textblob import TextBlob
+
+text = strip_headers(
+    load_etext(1065)
+    ).strip()
+blob = TextBlob(text)
+source = open('Lab2/TheRaven.txt','w',encoding="utf-16",newline='\n')
+source.write(text)
+source.close()
+max = 5
+index = 0
+# Find the longest sentence in the work
+for key, sentence in enumerate(blob.sentences):
+    if(len(sentence.words) > max):
+        max = len(sentence.words)
+        index = key
+        print(sentence)
+
+#This workds, but I only see 4 sentences. I modified the "Max" to be 6 to INCLUDE 
+#5 sentences, but I still see only 4 sentences. Wondering if there's a "tie" for the
+#5th largest sentence? Or maybe it's considering "The Raven by Edgar Allen Poe as a sentence?
+# Unsure where I'm going wrong.
 
 #%%
 # [2-3] ON YOUR OWN:
 
 # Using the code above for figures, create a new table that lists the top 10 most frequent words and how many times they occur in that text.
 
+import plotly.graph_objects as go
+
+fig = go.Figure(data=[go.Table(header=dict(values=['A Scores', 'B Scores']),
+                 cells=dict(values=[[100, 90, 80, 90], [95, 85, 75, 95]]))
+                     ])
+fig.show()
+
+#I tried to install "Plotly" to do this question, but I do not have the administrative
+#priviliges to download plotly. Thus, I can't make a table for this question.
 

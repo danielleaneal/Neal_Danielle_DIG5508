@@ -258,5 +258,6 @@ print(mostusedword)
 print(countofuse)
 
 #I tried to install "Plotly" to do this question, but I do not have the administrative
-#priviliges to download plotly. Thus, I can't make a table for this question.
+#priviliges to download plotly. Thus, I can't make a table for this question, but I
+#was able to make the logic work and show the most common words
 

@@ -77,7 +77,7 @@ ourimage
 
 #%%
 # Often objects (and ourimage is an Image object) have properties that are useful. 
-#For instance, the size can be obtained by the attribute 'size':
+#For instance, the siz e can be obtained by the attribute 'size':
 ourimage.size
 
 
@@ -93,6 +93,8 @@ ourimage.size
 # You must create the vertical line on an image of any size.
  
 # WRITE YOUR CODE HERE
+
+
 
 #%% [markdown]
 # # Gradients
@@ -136,6 +138,7 @@ rectangle
 cat = Image.open('cat.png')
 cat
 
+#MYNOTES - Nested four loop was the hint in class? 
 
 #%%
 # [2-6] ON YOUR OWN:

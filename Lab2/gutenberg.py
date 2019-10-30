@@ -184,15 +184,13 @@ from gutenberg.acquire import load_etext
 from gutenberg.cleanup import strip_headers
 from textblob import TextBlob
 
-text = strip_headers(
-    load_etext(1065)
-    ).strip()
+text = strip_headers(load_etext(1065)).strip()
 blob = TextBlob(text)
 source = open('Lab2/TheRaven.txt','w',encoding="utf-16",newline='\n')
 source.write(text)
 source.close()
 
-
+#%%
 Dani = TextBlob(text)
 
 Dani.word_counts['the']
@@ -203,30 +201,36 @@ Dani.word_counts['the']
 
 # Write code that finds the top 5 longest sentences in the work. You may store or display them however you choose, and you may build off of the code above that finds the longest sentence.
 
+from operator import itemgetter
 from gutenberg.acquire import load_etext
 from gutenberg.cleanup import strip_headers
 from textblob import TextBlob
 
-text = strip_headers(
-    load_etext(1065)
-    ).strip()
+text = strip_headers(load_etext(1065)).strip()
 blob = TextBlob(text)
 source = open('Lab2/TheRaven.txt','w',encoding="utf-16",newline='\n')
 source.write(text)
 source.close()
+
+#%%
+blob = TextBlob("text")
 max = 5
 index = 0
 # Find the longest sentence in the work
+mylist = []
 for key, sentence in enumerate(blob.sentences):
     if(len(sentence.words) > max):
         max = len(sentence.words)
         index = key
         print(sentence)
 
-#This workds, but I only see 4 sentences. I modified the "Max" to be 6 to INCLUDE 
+        
+
+#This works, but I only see 4 sentences. I modified the "Max" to be 6 to INCLUDE 
 #5 sentences, but I still see only 4 sentences. Wondering if there's a "tie" for the
 #5th largest sentence? Or maybe it's considering "The Raven by Edgar Allen Poe as a sentence?
 # Unsure where I'm going wrong.
+
 
 #%%
 # [2-3] ON YOUR OWN:

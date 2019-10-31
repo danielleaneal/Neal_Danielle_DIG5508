@@ -154,7 +154,7 @@ text = strip_headers(
 blob = TextBlob(text)
 # print(text)  # prints 'MOBY DICK; OR THE WHALE\n\nBy Herman Melville ...'
 # This will save the text to a local .txt file in this directory.
-source = open('Lab2/TheRaven.txt','w',encoding="utf-16",newline='\n')
+source = open('TheRaven.txt','w',encoding="utf-16",newline='\n')
 source.write(text)
 source.close()
 
@@ -208,21 +208,20 @@ from textblob import TextBlob
 
 text = strip_headers(load_etext(1065)).strip()
 blob = TextBlob(text)
-source = open('Lab2/TheRaven.txt','w',encoding="utf-16",newline='\n')
-source.write(text)
-source.close()
-
-#%%
-blob = TextBlob("text")
+source = open('TheRaven.txt','r',encoding="utf-16",newline='\n')
+txt = source.read()
+#source.close()
 max = 5
 index = 0
 # Find the longest sentence in the work
 mylist = []
 for key, sentence in enumerate(blob.sentences):
+    mylist.append((sentence,len(sentence.words)))
     if(len(sentence.words) > max):
         max = len(sentence.words)
         index = key
-        print(sentence)
+
+sorted(mylist,key=itemgetter(1))
 
         
 

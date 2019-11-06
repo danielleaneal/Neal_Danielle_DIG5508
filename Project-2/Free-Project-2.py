@@ -38,6 +38,21 @@ def transformlocalimage(text):
 transformlocalimage("HI JOHN MURRAY")
 
 
+#Blurring the Dog Collage
+
+#%%
+from PIL import Image, ImageFilter
+
+img = Image.open("Project-2\DAWGS.jpg")
+img = img.filter(ImageFilter.GaussianBlur(radius=3))
+
+img.show()
+
+#I ran this code with different numbers in for the "radius,"
+#and learned that the radius controls just HOW blurry the photo is
+#made to be.
+
+
 
 
 

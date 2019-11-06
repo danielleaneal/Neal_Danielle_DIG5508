@@ -53,6 +53,13 @@ img.show()
 #made to be.
 
 
+#Rotating an image 90 degrees
+#%%
+from PIL import Image
+
+img = Image.open("Project-2\DAWGS.jpg")
+img.rotate(90).show()
+
 
 
 

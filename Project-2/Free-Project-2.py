@@ -17,7 +17,26 @@ def transformimage(text, bgcolor):
 transformimages("Dani Was HERE", "pink")
 
 
+
+#putting text on an image on my local computer
 #%%
+from PIL import Image, ImageDraw
+
+def transformlocalimage(text):
+    img = Image.open("Project-2\DAWGS.jpg")
+    width,height = img.size
+    w = width / 2
+    h = height / 2
+
+    d = ImageDraw.Draw(img)
+    d.text ((w,h), text, fill=(255,255,0))
+    return img
+
+
+transformlocalimage("HI JOHN MURRAY")
+
+
+
 
 
 

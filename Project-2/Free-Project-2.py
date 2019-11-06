@@ -18,7 +18,9 @@ transformimages("Dani Was HERE", "pink")
 
 
 
-#putting text on an image on my local computer
+#putting text on an image on my local computer and making the
+#text show up closer to the center of it (because the image is
+#larger than before)
 #%%
 from PIL import Image, ImageDraw
 

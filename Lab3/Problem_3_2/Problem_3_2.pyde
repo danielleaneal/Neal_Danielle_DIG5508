@@ -15,20 +15,17 @@ class Car(object):
         fill(self.c)
         rectMode(CENTER)
         rect(self.xpos, self.ypos, 20, 10);
+    def setcolor(self, newcolor):
+        self.c = newcolor
     
     def drive(self):
         self.xpos = self.xpos + self.xspeed;
         if self.xpos > width:
             self.xpos = 0
-    
+
 myCar1 = Car(color(255, 0, 0), 0, 100, 2)
 myCar2 = Car(color(250, 255, 255), 0, 10, 1)
-if ((keyCode) and ((key == 'space key'))):
-    myCar2 = Car(color (random(255)), 0, 10, 1)
-else:
-    myCar2 = Car(color(250, 255, 255), 0, 10, 1)
-    
-    
+
 # When I first tried to add "keypressed" to the function, I got an error that stated 
 # "keyPressed is not defined." I'm going to research how to define keyPressed, as I thought that 
 # defining that I wanted the keyPressed to be the spacebar would be sufficient. I changed "keyPressed" to
@@ -39,10 +36,14 @@ else:
     
 def setup():
     size(200,200)
+    print("test")
+    
     
 def draw(): 
-  background(255)
-  myCar1.drive()
-  myCar1.display()
-  myCar2.drive()
-  myCar2.display()
+    background(255)
+    myCar1.drive()
+    myCar1.display()
+    myCar2.drive()
+    myCar2.display()
+    if ((keyPressed) and (key == ' ')):
+        myCar2.setcolor(color(random(255)))

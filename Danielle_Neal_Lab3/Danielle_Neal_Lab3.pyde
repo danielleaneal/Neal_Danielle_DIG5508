@@ -200,12 +200,13 @@ def draw():
     myDog4.display()
     myBall1.display()
     myGreenStick1.display()
-    if (keyPressed and (key=='1')):
+    if (keyPressed and (key=='a')):
         myGreenStick1.changeshape(color (0, 240, 0), 100, 100)
+    print ("Press a to change the green stick's shape, and the spacebar to change the color of one of the dogs")
         
         
 # I couldn't get my function to change the shape of GreenStick to a different shape. All of my other code works, I think.
-# I couldn't get the ellipse to STAY the new shape when I press 1.
+# I couldn't get the ellipse to STAY the new shape when I press a.
 
 
     

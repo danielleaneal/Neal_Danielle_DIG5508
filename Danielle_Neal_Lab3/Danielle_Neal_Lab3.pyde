@@ -112,6 +112,67 @@ myDog3 = Dog(color(250, 0, 255), random(0,200),random(0,200), 1)
 myDog4 = Dog(color(0, 250, 255), random(0,200),random(0,200), 1)
 myDog2 = Dog(color (random(255)), random(0,200),random(0,200), 3)
 
+
+
+
+def mousePressed():
+    ellipse(mouseX, mouseY, 20, 20)
+    
+    
+
+# I changed the def display (self) function to make the dogs larger, because in my function,
+# the dogs are Great Danes. I also changed the background color to be forest green,
+# because the dogs are in a park (which is green). From here, I tried to mess with the speed of the animals,
+# and caused some of the dogs to run faster than the others. I also spaced them out a little
+# bit to give them room to run in the park. They move each frame.
+
+
+
+class Ball(object):
+    def __init__(self, c, xpos, ypos, xspeed):
+        self.c = c
+        self.xpos = xpos
+        self.ypos = ypos
+        self.xspeed = xspeed
+    
+    def updatelocation (self, xpos, ypos):
+        self.xpos = xpos
+        self.ypos = ypos
+
+        
+    def display(self):
+        stroke(0)
+        fill(self.c)
+        ellipseMode(CENTER)
+        ellipse(self.xpos, self.ypos, 30, 20);
+    
+    def drive(self):
+        self.xpos = self.xpos + self.xspeed;
+        if self.xpos > width:
+            self.xpos = 0
+myBall1 = Ball(color(255, 255, 0), 0, 0, 2)
+
+def mousePressed():
+    myBall1.updatelocation (mouseX, mouseY)
+    
+    
+class GreenStick(object):
+    def __init__(self, c, xpos, ypos):
+        self.c = c
+        self.xpos = xpos
+        self.ypos = ypos
+        
+    def display(self):
+        stroke(0)
+        fill(self.c)
+        rectMode(CENTER)
+        rect(self.xpos, self.ypos, 30, 10);
+        
+myGreenStick1 = GreenStick(color(50, 255, 0), 10, 10)
+    
+
+
+    
 def draw(): 
     background(255)
     myCar1.drive()
@@ -128,18 +189,18 @@ def draw():
     myDog3.display()
     myDog4.drive()
     myDog4.display()
-    pass
+    myBall1.display()
+    myGreenStick1.display()
+    
 
-def mousePressed():
-    rect(mouseX, mouseY, 33, 33)
+    
+    
+    
+    
+# I couldn't get the ellipse to create new objects each time the mouse is clicked.
+
+
     
     
 
-# I changed the def display (self) function to make the dogs larger, because in my function,
-# the dogs are Great Danes. I also changed the background color to be forest green,
-# because the dogs are in a park (which is green). From here, I tried to mess with the speed of the animals,
-# and caused some of the dogs to run faster than the others. I also spaced them out a little
-# bit to give them room to run in the park. They move each frame.
-
-
-#3-4
+    

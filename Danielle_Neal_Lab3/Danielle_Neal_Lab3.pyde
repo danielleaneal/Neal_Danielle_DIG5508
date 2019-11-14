@@ -167,6 +167,15 @@ class GreenStick(object):
         fill(self.c)
         rectMode(CENTER)
         rect(self.xpos, self.ypos, 30, 10);
+    
+    def changeshape (self, c, xpos, ypos):
+        stroke(0)
+        fill(self.c)
+        ellipseMode(CENTER)
+        ellipse(self.xpos, self.ypos, 30, 10);
+        
+        
+        
         
 myGreenStick1 = GreenStick(color(50, 255, 0), 10, 10)
     
@@ -191,13 +200,12 @@ def draw():
     myDog4.display()
     myBall1.display()
     myGreenStick1.display()
-    
-
-    
-    
-    
-    
-# I couldn't get the ellipse to create new objects each time the mouse is clicked.
+    if (keyPressed and (key=='1')):
+        myGreenStick1.changeshape(color (0, 240, 0), 100, 100)
+        
+        
+# I couldn't get my function to change the shape of GreenStick to a different shape. All of my other code works, I think.
+# I couldn't get the ellipse to STAY the new shape when I press 1.
 
 
     

@@ -56,14 +56,19 @@ def setup():
     size (1000,1000)
     frameRate(60)
     
-myPoem1 = Poem(lines_of_the_poem, 0,0,2.5)
+myPoem1 = Poem(lines_of_the_poem, 5,0,2.5)
+myPoem2 = Poem(lines_of_the_poem, 5,200,2.5)
+myPoem3 = Poem(lines_of_the_poem, 5,385,2.5)
     
 def draw():
     background(244,194,194)
     myPoem1.display()
+    myPoem2.display()
+    myPoem3.display()
     if (keyPressed and (key==' ')):
-        myPoem1.anotherrandomline(lines_of_the_poem, 0,0,2.5)        
-            
+        myPoem1.anotherrandomline(lines_of_the_poem, 5,0,2.5)        
+        myPoem2.anotherrandomline(lines_of_the_poem, 5,200,2.5)
+        myPoem3.anotherrandomline(lines_of_the_poem, 5,385,2.5)    
 
         
     
@@ -103,6 +108,11 @@ def draw():
 # However, due to time constraints and other assignments that are looming over my head, 
 # I will accept this program as having satisfied my initial goals of having features
 # of text, poetry, randomization, movement, and iteration.
+
+
+# THEN I added extra lines so there was even more "iteration" and "randomness" that also 
+# refreshed with a spacebar click. I then spaced them out a ton so they were legible 
+# altogether.
     
 
         

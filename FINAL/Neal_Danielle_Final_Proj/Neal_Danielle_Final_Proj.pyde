@@ -49,7 +49,12 @@ class Poem(object):
         self.yspeed = yspeed
         self.listLen = len(self.poem)
         self.ran = int(random(0,self.listLen));
-     
+        
+def keyPressed():
+        myPoem1.anotherrandomline(lines_of_the_poem, 5,0,2.5)        
+        myPoem2.anotherrandomline(lines_of_the_poem, 5,200,2.5)
+        myPoem3.anotherrandomline(lines_of_the_poem, 5,385,2.5)    
+
       
         
 def setup():
@@ -65,10 +70,7 @@ def draw():
     myPoem1.display()
     myPoem2.display()
     myPoem3.display()
-    if (keyPressed and (key==' ')):
-        myPoem1.anotherrandomline(lines_of_the_poem, 5,0,2.5)        
-        myPoem2.anotherrandomline(lines_of_the_poem, 5,200,2.5)
-        myPoem3.anotherrandomline(lines_of_the_poem, 5,385,2.5)    
+  
 
         
     
